@@ -12,6 +12,15 @@ var form = d3.select("form");
 //Select the table body
 var tbody = d3.select("tbody");
 
+//load full table
+data.forEach((value) => {
+    var row = tbody.append("tr");
+    Object.entries(value).forEach(([key, value]) => {
+    var cell = row.append("td");
+    cell.text(value);
+    });
+  });
+
 // Create event handlers 
 button.on("click", runEnter);
 form.on("submit", runEnter);
