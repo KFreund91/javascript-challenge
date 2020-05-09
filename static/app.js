@@ -19,6 +19,9 @@ form.on("submit", runEnter);
 // Complete the event handler function for the form
 function runEnter() {
 
+    //clear previous input
+    tbody.html("")
+
     // Prevent the page from refreshing
     d3.event.preventDefault();
 
